@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Markdown on My Awesome Blog</title><link>https://tmwalaszek.github.io/tags/markdown/</link><description>Recent content in Markdown on My Awesome Blog</description><generator>Hugo -- 0.145.0</generator><language>en-us</language><lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tmwalaszek.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown and Mermaid Examples</title><link>https://tmwalaszek.github.io/posts/markdown-and-mermaid/</link><pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate><guid>https://tmwalaszek.github.io/posts/markdown-and-mermaid/</guid><description>&lt;h1 id="markdown-and-mermaid-examples">Markdown and Mermaid Examples&lt;/h1>
+&lt;p>This post demonstrates various GitHub-style markdown features and Mermaid diagrams in Hugo.&lt;/p>
+&lt;h2 id="github-style-markdown-features">GitHub-style Markdown Features&lt;/h2>
+&lt;h3 id="tables">Tables&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Feature&lt;/th>
+&lt;th>Support&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Tables&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Task Lists&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Emojis&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Code Blocks&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="task-lists">Task Lists&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Enable GitHub-style markdown&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Enable Mermaid diagrams&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Add more examples&lt;/li>
+&lt;/ul>
+&lt;h3 id="code-blocks-with-syntax-highlighting">Code Blocks with Syntax Highlighting&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">hello_world&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">True&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="mermaid-diagrams">Mermaid Diagrams&lt;/h2>
+&lt;h3 id="flowchart">Flowchart&lt;/h3>
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">graph TD
+A[Start] --&amp;gt; B{Is it working?}
+B --&amp;gt;|Yes| C[Great!]
+B --&amp;gt;|No| D[Debug]
+D --&amp;gt; B
+&lt;/code>&lt;/pre>&lt;h3 id="sequence-diagram">Sequence Diagram&lt;/h3>
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+participant User
+participant Blog
+participant Server
+User-&amp;gt;&amp;gt;Blog: Visit page
+Blog-&amp;gt;&amp;gt;Server: Request content
+Server--&amp;gt;&amp;gt;Blog: Return content
+Blog--&amp;gt;&amp;gt;User: Display page
+&lt;/code>&lt;/pre>&lt;h3 id="gantt-chart">Gantt Chart&lt;/h3>
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">gantt
+title Blog Development Timeline
+dateFormat YYYY-MM-DD
+section Planning
+Design :a1, 2024-03-19, 7d
+section Development
+Implementation :a2, after a1, 5d
+Testing :a3, after a2, 3d
+&lt;/code>&lt;/pre>&lt;h3 id="pie-chart">Pie Chart&lt;/h3>
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">pie title Blog Content Distribution
+&amp;#34;Technical Posts&amp;#34; : 40
+&amp;#34;Tutorials&amp;#34; : 30
+&amp;#34;Personal Updates&amp;#34; : 20
+&amp;#34;Other&amp;#34; : 10
+&lt;/code>&lt;/pre>&lt;h2 id="additional-markdown-features">Additional Markdown Features&lt;/h2>
+&lt;h3 id="blockquotes">Blockquotes&lt;/h3>
+&lt;blockquote>
+&lt;p>This is a blockquote.
+It can span multiple lines.&lt;/p></description></item></channel></rss>
