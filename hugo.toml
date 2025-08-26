@@ -1,0 +1,26 @@
+baseURL = "https://tmwalaszek.github.io/"
+languageCode = "en"
+title = "Blog"
+
+theme = "github.com/athul/archie"
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  mode = "auto"
+  subtitle = "Blog"
+  description = "Blog about things"
+  github = "https://github.com/tmwalaszek"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
