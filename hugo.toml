@@ -12,6 +12,16 @@ theme = "github.com/athul/archie"
   subtitle = "Blog"
   description = "Blog about things"
   github = "https://github.com/tmwalaszek"
+  customCSS = ["css/custom.css"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+    lineNos = false
+    lineNumbersInTable = false
+    anchorLineNos = false
+    guessSyntax = true
 
 [menu]
   [[menu.main]]

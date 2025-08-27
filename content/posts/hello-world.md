@@ -6,3 +6,15 @@ tags: ["test"]
 ---
 
 It's my first post
+
+<!--more-->
+
+```Go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello")
+}
+```
