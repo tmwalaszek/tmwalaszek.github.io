@@ -4,7 +4,7 @@
     <title>Test on Blog</title>
     <link>http://localhost:1313/tags/test/</link>
     <description>Recent content in Test on Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 26 Aug 2025 14:00:00 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Tue, 26 Aug 2025 14:00:00 +0200</pubDate>
       <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s my first post&lt;/p&gt;</description>
+      <description>It&amp;rsquo;s my first post</description>
     </item>
   </channel>
 </rss>
