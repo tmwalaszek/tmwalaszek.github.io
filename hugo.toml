@@ -8,7 +8,7 @@ theme = "github.com/athul/archie"
   pagerSize = 5
 
 [params]
-  mode = "auto"
+  mode = "light"
   subtitle = "Blog"
   description = "Blog about things"
   github = "https://github.com/tmwalaszek"

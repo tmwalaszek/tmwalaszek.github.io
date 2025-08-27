@@ -70,3 +70,6 @@ blockquote {
 /* Line numbers (if enabled) */
 .chroma .ln { color: #aaa; padding-right: .6rem; user-select: none; }
 
+body { background: var(--bg) !important; color: var(--fg) !important; }
+a { color: var(--accent) !important; }
+pre, code, .chroma { background: var(--code-bg) !important; color: var(--code-fg) !important; }
