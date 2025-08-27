@@ -1,0 +1,12 @@
+:root {
+  --bg: #2e3440;
+  --fg: #d8dee9;
+  --accent: #88c0d0;
+  --code-bg: #3b4252;
+}
+
+html, body { background: var(--bg); color: var(--fg); }
+a { color: var(--accent); }
+pre, code { background: var(--code-bg); color: #eceff4; }
+blockquote { border-left: 3px solid var(--accent); padding-left: .8rem; }
+
