@@ -6,19 +6,21 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
     <script src="/js/theme.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=2">
+    <link rel="stylesheet" href="/css/style.css?v=3">
 </head>
 <body>
-    {{ partial "header.html" . }}
-    
-    <div class="layout">
-        {{ partial "sidebar.html" . }}
-        
-        <main>
-            {{ block "main" . }}{{ end }}
-        </main>
+    <div class="page-wrapper">
+        {{ partial "header.html" . }}
+
+        <div class="layout">
+            {{ partial "sidebar.html" . }}
+
+            <main>
+                {{ block "main" . }}{{ end }}
+            </main>
+        </div>
     </div>
-    
+
     {{ partial "footer.html" . }}
 </body>
 </html>

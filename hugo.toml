@@ -4,7 +4,8 @@ title = 'tmw'
 
 [params]
   description = "A clean and simple blog"
-  author = "Your Name"
+  author = "Tomasz Walaszek"
+  email = "tomasz@walaszek.net"
 
 [markup]
   [markup.goldmark]

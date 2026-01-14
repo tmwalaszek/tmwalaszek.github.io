@@ -3,27 +3,17 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started with Hugo - My Simple Blog</title>
-    <meta name="description" content="Welcome to your new Hugo blog! This is your first post written in Markdown.
-What is Hugo?
-Hugo is a fast and modern static site generator written in Go. It&rsquo;s perfect for building blogs, portfolios, and documentation sites.
-Key Features
-
-Blazing fast build times
-Markdown support out of the box
-Simple and clean structure
-No database required
-
-Writing in Markdown
-Markdown makes it super easy to format your content. Here are some basics:">
+    <title>Hello World! - tmw</title>
+    <meta name="description" content="Hello World!">
     <script src="/js/theme.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=2">
+    <link rel="stylesheet" href="/css/style.css?v=3">
 </head>
 <body>
-    <header class="site-header">
+    <div class="page-wrapper">
+        <header class="site-header">
     <div class="container">
         <nav>
-            <h1><a href="/">My Simple Blog</a></h1>
+            <h1><a href="/">tmw</a></h1>
             <ul>
                 <li><a href="/" class="">Home</a></li>
                 <li><a href="/posts/" class="active">Posts</a></li>
@@ -34,10 +24,15 @@ Markdown makes it super easy to format your content. Here are some basics:">
     </div>
 </header>
 
-    
-    <div class="layout">
-        <aside class="sidebar">
+
+        <div class="layout">
+            <aside class="sidebar">
     <div class="sidebar-content">
+        <div class="sidebar-author">
+            <h3>// Tomasz Walaszek</h3>
+            <a href="mailto:tomasz@walaszek.net">tomasz@walaszek.net</a>
+        </div>
+
         <div class="ascii-art">
 <pre>
  ╔═══════════════╗
@@ -51,7 +46,7 @@ Markdown makes it super easy to format your content. Here are some basics:">
             
             <a href="http://localhost:1313/posts/getting-started/" class="post-nav-item active">
                 <span class="post-nav-date">2024-01-15</span>
-                <span class="post-nav-title">Getting Started with Hugo</span>
+                <span class="post-nav-title">Hello World!</span>
             </a>
             
         </nav>
@@ -65,137 +60,37 @@ Markdown makes it super easy to format your content. Here are some basics:">
         <div class="sidebar-tags">
             <h3>// Tags</h3>
             
-            <a href="/tags/blogging" class="sidebar-tag">
-                #blogging (1)
-            </a>
-            
-            <a href="/tags/hugo" class="sidebar-tag">
-                #hugo (1)
-            </a>
-            
-            <a href="/tags/tutorial" class="sidebar-tag">
-                #tutorial (1)
-            </a>
-            
         </div>
     </div>
 </aside>
 
-        
-        <main>
-            
+
+            <main>
+                
 <div class="container">
     <article class="post">
         <header class="post-header">
-            <h1>Getting Started with Hugo</h1>
+            <h1>Hello World!</h1>
             <div class="post-meta">
                 <time>January 15, 2024</time>
-                
-                <span class="tags">
-                    
-                    <span class="tag">hugo</span>
-                    
-                    <span class="tag">blogging</span>
-                    
-                    <span class="tag">tutorial</span>
-                    
-                </span>
                 
             </div>
         </header>
         
         <div class="post-content">
-            <p>Welcome to your new Hugo blog! This is your first post written in <strong>Markdown</strong>.</p>
-<h2 id="what-is-hugo">What is Hugo?</h2>
-<p>Hugo is a fast and modern static site generator written in Go. It&rsquo;s perfect for building blogs, portfolios, and documentation sites.</p>
-<h3 id="key-features">Key Features</h3>
-<ul>
-<li><strong>Blazing fast</strong> build times</li>
-<li><strong>Markdown</strong> support out of the box</li>
-<li>Simple and clean structure</li>
-<li>No database required</li>
-</ul>
-<h2 id="writing-in-markdown">Writing in Markdown</h2>
-<p>Markdown makes it super easy to format your content. Here are some basics:</p>
-<h3 id="text-formatting">Text Formatting</h3>
-<p>You can use <em>italic</em>, <strong>bold</strong>, or <em><strong>bold italic</strong></em> text. You can also use <del>strikethrough</del>.</p>
-<h3 id="lists">Lists</h3>
-<p>Unordered list:</p>
-<ul>
-<li>First item</li>
-<li>Second item</li>
-<li>Third item</li>
-</ul>
-<p>Ordered list:</p>
-<ol>
-<li>First step</li>
-<li>Second step</li>
-<li>Third step</li>
-</ol>
-<h3 id="code">Code</h3>
-<p>Inline code looks like <code>this</code>.</p>
-<p>Code blocks look like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello_world</span>():
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello, Hugo!&#34;</span>)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello from JavaScript!&#34;</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="blockquotes">Blockquotes</h3>
-<blockquote>
-<p>&ldquo;The best way to predict the future is to invent it.&rdquo;
-— Alan Kay</p>
-</blockquote>
-<h3 id="links">Links</h3>
-<p>Check out <a href="https://gohugo.io/documentation/">Hugo&rsquo;s documentation</a> for more info.</p>
-<h3 id="images">Images</h3>
-<p>You can add images like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Alt text</span>](<span style="color:#a6e22e">/images/photo.jpg</span>)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="adding-new-posts">Adding New Posts</h2>
-<p>To add a new post, just create a new <code>.md</code> file in the <code>content/posts/</code> directory:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/my-new-post.md
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>That&rsquo;s it! Start writing and enjoy your blogging journey.</p>
+            <p>Hello World!</p>
 
         </div>
     </article>
 </div>
 
-        </main>
+            </main>
+        </div>
     </div>
-    
+
     <footer class="site-footer">
     <div class="container">
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Tomasz Walaszek | <a href="mailto:tomasz@walaszek.net">tomasz@walaszek.net</a></p>
     </div>
 </footer>
 

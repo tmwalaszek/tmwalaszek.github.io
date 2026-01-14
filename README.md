@@ -37,19 +37,6 @@ Or download from: https://github.com/gohugoio/hugo/releases
 
 ## Usage
 
-### Quick Management Scripts
-
-I've included handy scripts for managing your blog:
-
-```bash
-./list-posts.sh          # List all posts with details
-./list-tags.sh           # List all tags with counts
-./new-post.sh my-post    # Create a new post
-./delete-post.sh old.md  # Delete a post (with confirmation)
-```
-
-See [SCRIPTS.md](SCRIPTS.md) for full documentation.
-
 ### Start the development server
 
 ```bash

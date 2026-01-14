@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Simple Blog</title>
+    <title>tmw</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My Simple Blog</description>
+    <description>Recent content on tmw</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started with Hugo</title>
+      <title>Hello World!</title>
       <link>http://localhost:1313/posts/getting-started/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/getting-started/</guid>
-      <description>&lt;p&gt;Welcome to your new Hugo blog! This is your first post written in &lt;strong&gt;Markdown&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;&#xA;&lt;p&gt;Hugo is a fast and modern static site generator written in Go. It&amp;rsquo;s perfect for building blogs, portfolios, and documentation sites.&lt;/p&gt;&#xA;&lt;h3 id=&#34;key-features&#34;&gt;Key Features&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Blazing fast&lt;/strong&gt; build times&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Markdown&lt;/strong&gt; support out of the box&lt;/li&gt;&#xA;&lt;li&gt;Simple and clean structure&lt;/li&gt;&#xA;&lt;li&gt;No database required&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;writing-in-markdown&#34;&gt;Writing in Markdown&lt;/h2&gt;&#xA;&lt;p&gt;Markdown makes it super easy to format your content. Here are some basics:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hello World!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
