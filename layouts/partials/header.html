@@ -1,0 +1,13 @@
+<header class="site-header">
+    <div class="container">
+        <nav>
+            <h1><a href="/">{{ .Site.Title }}</a></h1>
+            <ul>
+                <li><a href="/" class="{{ if .IsHome }}active{{ end }}">Home</a></li>
+                <li><a href="/posts/" class="{{ if eq .Section "posts" }}active{{ end }}">Posts</a></li>
+                <li><a href="/tags/" class="{{ if eq .Section "tags" }}active{{ end }}">Tags</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>

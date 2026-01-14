@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+    <script src="/js/theme.js"></script>
+    <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+    {{ partial "header.html" . }}
+    
+    <div class="layout">
+        {{ partial "sidebar.html" . }}
+        
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+    </div>
+    
+    {{ partial "footer.html" . }}
+</body>
+</html>

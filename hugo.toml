@@ -1,36 +1,16 @@
-baseURL = "https://tmwalaszek.github.io/"
-languageCode = "en"
-title = "Blog"
-
-theme = "github.com/athul/archie"
-
-[pagination]
-  pagerSize = 5
+baseURL = 'https://tmwalaszek.github.io/'
+languageCode = 'en-us'
+title = 'tmw'
 
 [params]
-  mode = "light"
-  subtitle = "Blog"
-  description = "Blog about things"
-  github = "https://github.com/tmwalaszek"
-  customCSS = ["css/custom.css"]
+  description = "A clean and simple blog"
+  author = "Your Name"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
-    noClasses = false
-    style = "github"
-    lineNos = false
-    lineNumbersInTable = false
-    anchorLineNos = false
-    guessSyntax = true
-
-[menu]
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 1
-
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-
+    style = 'monokai'
+    lineNos = true
+    lineNumbersInTable = true

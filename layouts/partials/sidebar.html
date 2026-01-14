@@ -1,0 +1,36 @@
+<aside class="sidebar">
+    <div class="sidebar-content">
+        <div class="ascii-art">
+<pre>
+ ╔═══════════════╗
+ ║   BLOG POSTS  ║
+ ╚═══════════════╝
+</pre>
+        </div>
+        
+        <nav class="post-nav">
+            {{ $currentPage := . }}
+            {{ range (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
+            <a href="{{ .Permalink }}" class="post-nav-item {{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+                <span class="post-nav-date">{{ .Date.Format "2006-01-02" }}</span>
+                <span class="post-nav-title">{{ .Title }}</span>
+            </a>
+            {{ end }}
+        </nav>
+        
+        <div class="ascii-divider">
+<pre>
+ ─────────────────
+</pre>
+        </div>
+        
+        <div class="sidebar-tags">
+            <h3>// Tags</h3>
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="sidebar-tag">
+                #{{ $name }} ({{ .Count }})
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</aside>

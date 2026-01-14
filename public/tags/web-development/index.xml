@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web-Development on My Simple Blog</title>
+    <link>http://localhost:1313/tags/web-development/</link>
+    <description>Recent content in Web-Development on My Simple Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I Love Static Sites</title>
+      <link>http://localhost:1313/posts/why-static-sites/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-static-sites/</guid>
+      <description>&lt;p&gt;Static sites are awesome, and here&amp;rsquo;s why.&lt;/p&gt;&#xA;&lt;h2 id=&#34;speed&#34;&gt;Speed&lt;/h2&gt;&#xA;&lt;p&gt;Static sites are &lt;strong&gt;blazing fast&lt;/strong&gt;. No database queries, no server-side processing - just pure HTML, CSS, and JavaScript served directly to your users.&lt;/p&gt;&#xA;&lt;h3 id=&#34;performance-benefits&#34;&gt;Performance Benefits&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Near-instant page loads&lt;/li&gt;&#xA;&lt;li&gt;Can be cached everywhere&lt;/li&gt;&#xA;&lt;li&gt;CDN-friendly&lt;/li&gt;&#xA;&lt;li&gt;Minimal server resources&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;security&#34;&gt;Security&lt;/h2&gt;&#xA;&lt;p&gt;With no database and no server-side code execution, the attack surface is minimal:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No SQL injection&lt;/li&gt;&#xA;&lt;li&gt;No XSS vulnerabilities from backend&lt;/li&gt;&#xA;&lt;li&gt;No need to patch server software constantly&lt;/li&gt;&#xA;&lt;li&gt;Just static files&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;cost&#34;&gt;Cost&lt;/h2&gt;&#xA;&lt;p&gt;Hosting static sites is dirt cheap or even free:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
