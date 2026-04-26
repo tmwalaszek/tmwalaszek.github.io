@@ -1,13 +1,19 @@
 {{ define "main" }}
-<div class="container">
-    <h1>All Tags</h1>
-    
-    <div class="tags-cloud">
+<section class="wrap">
+    <header class="page-header">
+        <h1 class="page-title">Tags</h1>
+        <p class="page-lede">Topics I've written about.</p>
+    </header>
+
+    <ul class="tag-cloud">
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-cloud-item">
-            {{ $name }} <span class="tag-count">({{ .Count }})</span>
-        </a>
+        <li>
+            <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">
+                <span>{{ $name }}</span>
+                <span class="tag-count">{{ .Count }}</span>
+            </a>
+        </li>
         {{ end }}
-    </div>
-</div>
+    </ul>
+</section>
 {{ end }}

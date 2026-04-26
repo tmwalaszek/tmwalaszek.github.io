@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview — tmw</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap">
+    <script src="static/js/theme.js"></script>
+    <link rel="stylesheet" href="static/css/style.css?v=8">
+    <style>
+      .preview-tabs {
+        max-width: 46rem; margin: 0 auto; padding: 1.5rem var(--gutter, 1.5rem) 0;
+        display: flex; gap: .5rem;
+        font-family: var(--sans); font-size: .8rem; letter-spacing: .04em;
+      }
+      .preview-tabs button {
+        background: var(--surface); color: var(--muted);
+        border: 1px solid var(--rule); border-radius: 999px;
+        padding: .35rem .9rem; cursor: pointer; font: inherit;
+        transition: color .15s ease, border-color .15s ease, background .15s ease;
+      }
+      .preview-tabs button:hover { color: var(--text); border-color: var(--muted); }
+      .preview-tabs button.is-active {
+        color: var(--bg); background: var(--text); border-color: var(--text);
+      }
+      .preview-pane { display: none; }
+      .preview-pane.is-active { display: block; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a href="#" class="site-title">tmw</a>
+            <p class="site-tagline">Just me, thinking out loud.</p>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#" data-pane="home" class="is-active">Home</a>
+                <a href="#" data-pane="post">Posts</a>
+                <a href="#">Tags</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" type="button">
+                    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="preview-tabs">
+        <button data-tab="home" class="is-active">Home page</button>
+        <button data-tab="post">Single post</button>
+    </div>
+
+    <main class="site-main">
+
+      <!-- =========== Home page (list only) =========== -->
+      <div class="preview-pane is-active" data-pane="home">
+        <section class="hero wrap">
+            <h1 class="hero-title">tmw</h1>
+            <p class="hero-lede">Just me, thinking out loud.</p>
+        </section>
+
+        <section class="wrap">
+            <h2 class="section-eyebrow">Latest writing</h2>
+            <ol class="post-index">
+                <li class="post-index-item">
+                    <a href="#" class="post-index-link" onclick="showPane('post'); return false;">
+                        <time class="post-index-date" datetime="2026-04-26">Apr 26, 2026</time>
+                        <span class="post-index-title">First post</span>
+                    </a>
+                </li>
+            </ol>
+        </section>
+      </div>
+
+      <!-- =========== Single post (with left sidebar legend) =========== -->
+      <div class="preview-pane" data-pane="post">
+        <div class="post-layout">
+            <aside class="post-sidebar" aria-label="All posts">
+                <p class="sidebar-eyebrow">All writing</p>
+                <nav class="sidebar-posts">
+                    <a href="#" class="sidebar-post is-active">
+                        <time datetime="2026-04-26">Apr 26, 2026</time>
+                        <span class="sidebar-post-title">First post</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <article class="post">
+                <header class="post-header">
+                    <h1 class="post-title">First post</h1>
+                    <p class="post-meta">
+                        <time datetime="2026-04-26">April 26, 2026</time>
+                    </p>
+                </header>
+
+                <div class="post-content prose">
+                    <p>hello</p>
+                </div>
+            </article>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p class="footer-meta">
+                &copy; 2026 Tomasz Walaszek
+                <span class="dot">·</span>
+                <a href="mailto:tomasz@walaszek.net">tomasz@walaszek.net</a>
+                <span class="dot">·</span>
+                <a href="#">RSS</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+      function showPane(name) {
+        document.querySelectorAll('.preview-pane').forEach(p => p.classList.toggle('is-active', p.dataset.pane === name));
+        document.querySelectorAll('.preview-tabs button').forEach(b => b.classList.toggle('is-active', b.dataset.tab === name));
+        document.querySelectorAll('.site-nav a[data-pane]').forEach(a => a.classList.toggle('is-active', a.dataset.pane === name));
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+      document.querySelectorAll('.preview-tabs button').forEach(btn => {
+        btn.addEventListener('click', () => showPane(btn.dataset.tab));
+      });
+      document.querySelectorAll('.site-nav a[data-pane]').forEach(a => {
+        a.addEventListener('click', e => { e.preventDefault(); showPane(a.dataset.pane); });
+      });
+    </script>
+</body>
+</html>

@@ -1,5 +1,11 @@
 <footer class="site-footer">
-    <div class="container">
-        <p>&copy; {{ now.Year }} {{ .Site.Params.author }} | <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+    <div class="wrap">
+        <p class="footer-meta">
+            &copy; {{ now.Year }} {{ .Site.Params.author }}
+            <span class="dot">·</span>
+            <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+            <span class="dot">·</span>
+            <a href="/index.xml">RSS</a>
+        </p>
     </div>
 </footer>

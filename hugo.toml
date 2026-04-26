@@ -2,8 +2,11 @@ baseURL = 'https://tmwalaszek.github.io/'
 languageCode = 'en-us'
 title = 'tmw'
 
+enableRobotsTXT = true
+summaryLength = 40
+
 [params]
-  description = "A clean and simple blog"
+  description = "Just me, thinking out loud."
   author = "Tomasz Walaszek"
   email = "tomasz@walaszek.net"
 
@@ -12,6 +15,13 @@ title = 'tmw'
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = 'monokai'
-    lineNos = true
-    lineNumbersInTable = true
+    style = 'github'
+    lineNos = false
+    noClasses = false
+    tabWidth = 2
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[taxonomies]
+  tag = "tags"

@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | absURL }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap">
     <script src="/js/theme.js"></script>
-    <link rel="stylesheet" href="/css/style.css?v=3">
+    <link rel="stylesheet" href="/css/style.css?v=8">
 </head>
 <body>
-    <div class="page-wrapper">
-        {{ partial "header.html" . }}
+    {{ partial "header.html" . }}
 
-        <div class="layout">
-            {{ partial "sidebar.html" . }}
-
-            <main>
-                {{ block "main" . }}{{ end }}
-            </main>
-        </div>
-    </div>
+    <main class="site-main">
+        {{ block "main" . }}{{ end }}
+    </main>
 
     {{ partial "footer.html" . }}
 </body>
