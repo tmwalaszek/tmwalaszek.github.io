@@ -47,6 +47,14 @@
       const os = matchMedia('(prefers-color-scheme: dark)');
       const isDark = () => (root.dataset.theme || (os.matches ? 'dark' : 'light')) === 'dark';
       const sync = () => btn.setAttribute('aria-pressed', isDark());
+      // Re-read the saved choice: a page restored by Back/Forward (bfcache)
+      // or open in another tab still has the theme it was left with.
+      const load = () => {
+        let t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t) root.dataset.theme = t; else delete root.dataset.theme;
+        sync();
+      };
 
       btn.addEventListener('click', () => {
         const next = isDark() ? 'light' : 'dark';
@@ -55,6 +63,8 @@
         sync();
       });
       os.addEventListener('change', sync);
+      addEventListener('pageshow', (e) => { if (e.persisted) load(); });
+      addEventListener('storage', (e) => { if (e.key === 'theme' || e.key === null) load(); });
       sync();
       btn.hidden = false;
     })();
