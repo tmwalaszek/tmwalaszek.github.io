@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
   {{- $desc := or .Description (.Summary | plainify | htmlUnescape) site.Params.description }}
   <meta name="description" content="{{ $desc | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 }}">
@@ -23,6 +24,9 @@
     <nav>
       <a href="{{ "posts/" | relURL }}"{{ if eq .Section "posts" }} aria-current="true"{{ end }}>Posts</a>
       <a href="{{ "tags/" | relURL }}"{{ if eq .Section "tags" }} aria-current="true"{{ end }}>Tags</a>
+      <button class="theme-toggle" type="button" aria-label="Dark mode" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
     </nav>
   </header>
 
@@ -35,5 +39,25 @@
     · <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
     · <a href="{{ "index.xml" | relURL }}">RSS</a>
   </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      const os = matchMedia('(prefers-color-scheme: dark)');
+      const isDark = () => (root.dataset.theme || (os.matches ? 'dark' : 'light')) === 'dark';
+      const sync = () => btn.setAttribute('aria-pressed', isDark());
+
+      btn.addEventListener('click', () => {
+        const next = isDark() ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+      os.addEventListener('change', sync);
+      sync();
+      btn.hidden = false;
+    })();
+  </script>
 </body>
 </html>
