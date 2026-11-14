@@ -1,0 +1,154 @@
+/* tmw — the whole site's styles. Light/dark follows the OS setting. */
+
+:root {
+  color-scheme: light dark;
+
+  --bg:      light-dark(#fbfaf6, #15140f);
+  --text:    light-dark(#1a1a1a, #e9e3d4);
+  --muted:   light-dark(#6b675f, #9a9183);
+  --rule:    light-dark(#e6e0d3, #2c2920);
+  --accent:  light-dark(#b04a2f, #e88563);
+  --code-bg: light-dark(#f4f1ea, #1f1d17);
+  --string:  light-dark(#3f6f3a, #a9c48a);
+
+  --serif: Newsreader, Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans:  system-ui, sans-serif;
+  --mono:  ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.125rem/1.65 var(--serif);
+  font-variant-numeric: oldstyle-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+
+/* Small sans-serif UI text */
+nav, .meta, .post-list time, .tags, .count, .pager, .site-footer {
+  font-family: var(--sans);
+  font-size: .875rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Header & footer ---------- */
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0 3rem;
+}
+.site-title { font-size: 1.35rem; font-weight: 600; }
+nav { display: flex; gap: 1.25rem; }
+nav [aria-current] { color: var(--text); }
+
+.site-footer { padding: 4rem 0 2rem; }
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); margin: 0 0 1.5rem; }
+h2 { font-size: 1.55rem; margin: 2em 0 .5em; }
+h3 { font-size: 1.25rem; margin: 1.75em 0 .4em; }
+h4 { font-size: 1.1rem; margin: 1.5em 0 .4em; }
+
+.lede {
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- Lists of posts & tags ---------- */
+.post-list, .tag-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { display: flex; gap: 1.25rem; align-items: baseline; padding: .3rem 0; }
+.post-list time { flex: 0 0 6.5rem; }
+.post-list a, .tag-list a { font-size: 1.15rem; }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.count { margin-left: .2rem; }
+
+@media (max-width: 30rem) {
+  .post-list li { flex-direction: column; gap: 0; }
+  .post-list time { flex: none; }
+}
+
+/* ---------- Post ---------- */
+article header { margin-bottom: 2.5rem; }
+article header h1 { margin-bottom: .35rem; }
+.meta { margin: 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .75rem; margin: 2.5rem 0 0; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.pager .newer { margin-left: auto; text-align: right; }
+
+/* ---------- Post content (Markdown) ---------- */
+.prose a { text-decoration: underline 1px var(--accent); text-underline-offset: 3px; }
+.prose p { hyphens: auto; text-wrap: pretty; }
+
+p, ul, ol, blockquote, pre, table, figure { margin: 0 0 1.25rem; }
+ul, ol { padding-left: 1.4rem; }
+li + li { margin-top: .3rem; }
+li::marker { color: var(--muted); }
+
+blockquote {
+  padding-left: 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  font-style: italic;
+}
+
+hr { border: 0; margin: 2.5rem 0; text-align: center; }
+hr::before { content: "❋"; color: var(--muted); }
+
+img, video { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+figure { margin-inline: 0; }
+figcaption { margin-top: .5rem; font: .875rem var(--sans); color: var(--muted); text-align: center; }
+
+table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+th, td { padding: .5rem .75rem .5rem 0; border-bottom: 1px solid var(--rule); text-align: left; }
+th { font: 600 .875rem var(--sans); color: var(--muted); }
+
+/* ---------- Code ---------- */
+code, pre { font-family: var(--mono); font-size: .85em; }
+pre code { font-size: inherit; }
+:not(pre) > code { padding: .1em .3em; border-radius: 4px; background: var(--code-bg); }
+pre {
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: var(--code-bg);
+  line-height: 1.5;
+  tab-size: 4;
+  font-variant-numeric: normal;
+}
+
+/* Syntax highlighting: Hugo's (Chroma) token classes, tinted with the site palette */
+.chroma :is(.c, .ch, .cm, .c1, .cs, .cp, .cpf) { color: var(--muted); font-style: italic; }
+.chroma :is(.k, .kc, .kd, .kn, .kp, .kr, .kt, .nt, .ow, .gd) { color: var(--accent); }
+.chroma :is(.s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss,
+            .m, .mb, .mf, .mh, .mi, .il, .mo, .gi) { color: var(--string); }
+.chroma :is(.nf, .fm) { font-weight: 600; }
+.chroma .hl { display: block; background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chroma .ln { margin-right: 1em; color: var(--muted); user-select: none; }

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  {{- $desc := or .Description (.Summary | plainify | htmlUnescape) site.Params.description }}
+  <meta name="description" content="{{ $desc | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{- with site.Home.OutputFormats.Get "rss" }}
+  <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+  {{- end }}
+  {{- partial "opengraph.html" . }}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap">
+  {{- with resources.Get "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- end }}
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    <nav>
+      <a href="{{ "posts/" | relURL }}"{{ if eq .Section "posts" }} aria-current="true"{{ end }}>Posts</a>
+      <a href="{{ "tags/" | relURL }}"{{ if eq .Section "tags" }} aria-current="true"{{ end }}>Tags</a>
+    </nav>
+  </header>
+
+  <main>
+    {{- block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    © {{ now.Year }} {{ site.Params.author }}
+    · <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    · <a href="{{ "index.xml" | relURL }}">RSS</a>
+  </footer>
+</body>
+</html>
